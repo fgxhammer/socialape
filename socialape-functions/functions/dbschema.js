@@ -27,6 +27,16 @@ const db = {
       body: "nice scream mate",
       createdAt: ""
     }
+  ],
+  notifications: [
+    {
+      recipient: "user",
+      sender: "john",
+      read: "true|false",
+      screamId: "iasodijaconowado",
+      type: "like | comment",
+      createdAt: "2019-08-05T00:13:27.586Z"
+    }
   ]
 };
 
