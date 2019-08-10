@@ -2,11 +2,8 @@ import React, { Component } from "react";
 
 export class signup extends Component {
   render() {
-    return (
-      <div>
-        <h1>signup</h1>
-      </div>
-    );
+    console.log("signup rendered");
+    return <h1>Signup</h1>;
   }
 }
 
