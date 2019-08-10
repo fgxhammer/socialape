@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import dayjs from "dayjs";
+import realativeTime from "dayjs/plugin/relativeTime";
 
 // MUI Stuff
 import { withStyles, Typography } from "@material-ui/core";
@@ -23,6 +25,7 @@ const styles = {
 
 export class Scream extends Component {
   render() {
+    dayjs.extend(realativeTime);
     const {
       classes,
       scream: {
@@ -52,7 +55,7 @@ export class Scream extends Component {
             {userHandle}
           </Typography>
           <Typography variant="body2" color="textSecondary">
-            {createdAt}
+            {dayjs(createdAt).fromNow()}
           </Typography>
           <Typography variant="body1">{body}</Typography>
         </CardContent>
