@@ -12,7 +12,7 @@ exports.getAllScreams = (req, res) => {
           screamId: doc.id,
           body: doc.data().body,
           userHandle: doc.data().userHandle,
-          createdAt: doc.data().userHandle,
+          createdAt: doc.data().createdAt,
           userImage: doc.data().userImage
         });
       });
