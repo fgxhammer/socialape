@@ -98,7 +98,8 @@ exports.logIn = (req, res) => {
       console.error(err);
       if (
         err.code === "auth/wrong-password" ||
-        err.code === "auth/invalid-email"
+        err.code === "auth/invalid-email" ||
+        err.code === "auth/user-not-found"
       ) {
         return res.status(403).json({
           general: "Wrong credentials! Please try again!"
